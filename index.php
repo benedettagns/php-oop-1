@@ -9,10 +9,12 @@ class Movie {
     function __construct(string $_title, string $_filmDirector, string  $_releaseYear, string $_originalLanguage) {
         $this->title = $_title;
         $this->filmDirector = $_filmDirector;
-        $this->email = $_releaseYear;
+        $this->releaseYear = $_releaseYear;
         $this->originalLanguage = $_originalLanguage;
       }
-    
+      public function print() {
+        return $this->title . "<br/>" . $this->filmDirector . "<br/>" . $this->releaseYear . "<br/>" . $this->originalLanguage;
+      }
 }
 
 $film = new Movie("Arancia Meccanica", "Stanley Kubrick", "1971", "inglese");
@@ -27,6 +29,10 @@ $cinema = new Movie("Batman Begins", "Christopher Nolan", "2005", "inglese");
 // $cinema->releaseYear = "2005";
 // $cinema->originalLanguage = "inglese";
 
+
+// var_dump($film);
+// var_dump($cinema);
+
 ?>
 
 <!DOCTYPE html>
@@ -35,14 +41,18 @@ $cinema = new Movie("Batman Begins", "Christopher Nolan", "2005", "inglese");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <?php echo $film ?> 
-    </div>
-    <div>
-        <?php echo $cinema ?> 
-    </div>
+    <div class="container">
+        <div>
+            <?php echo $film->print(); ?>
+        </div>
+
+        <div>
+            <?php echo $cinema->print(); ?>
+        </div>
+    </div>   
 </body>
 </html>

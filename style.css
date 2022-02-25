@@ -1,0 +1,23 @@
+body {
+    background-color: whitesmoke;
+    height: 100vh;
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.container div {
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(12, 138, 22);
+    width: 150px;
+    height: 200px;
+    padding-left: 30px;
+    padding-top: 50px ;
+    margin-left:10px ;
+}
